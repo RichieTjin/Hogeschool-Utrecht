@@ -12,5 +12,4 @@ def new_password(oldpassword, newpassword):
     else:
         print('False')
 
-
 new_password('henkkk', 'henkkq7')
