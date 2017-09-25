@@ -45,7 +45,7 @@ def ritprijs(leeftijd, weekendrit, afstandKM):
             return ritprijs
     else:
         if weekendrit == 'true':
-            ritprijs = (prijs / 100) * 65
+            ritprijs = (prijs / 100) * 60
             return ritprijs
         else:
             ritprijs = standaardprijs
@@ -55,4 +55,4 @@ leeftijd = eval(input('Wat is je leeftijd?: '))
 weekend = input('Reist u in het weekend: (true or false) ')
 afstand = eval(input('Wat is de afstand in km? : '))
 
-print('De prijs voor deze rit bedraagt: ' + str("{0:.2f}".format(ritprijs(leeftijd,weekend,afstand))) + ' euro.')
+print('De prijs voor deze rit bedraagt: €' + str("{0:.2f}".format(ritprijs(leeftijd,weekend,afstand))) + ' euro.')
