@@ -2,11 +2,9 @@
 # functie) kunt omzetten naar graden Fahrenheit. Je kunt de temperatuur in Fahrenheit berekenen met
 # de formule T(°F) = T(°C) × 1.8 + 32. Dus 25 °C = 25 * 1.8 + 32 = 77 °F.
 
-# def convert(celsius):
-#     celsius = celsius * 1.8 + 32
-#     return int(celsius)
-#
-# print(convert(25))
+def convert(celsius):
+    celsius = (celsius * 1.8) + 32
+    return float(celsius)
 
 
 # Schrijf nu ook een tweede functie table() waarin je met een for-loop van -30 °C t/m 40 °C in stappen
@@ -23,14 +21,9 @@
 # 86.0 30.0
 # 104.0 40.0
 
-for celsius in range(-30, 40, 10):
-    print(celsius)
+def table():
+    for celsius in range(-30, 41, 10):
+        print('{:5.1f} {:5.1f}'.format(convert(celsius), celsius))
 
-for celsius in range(-30, 40, 10):
-    fahrenheit = celsius * 1.8 + 32
-    l1 = fahrenheit
+table()
 
-# l1 = ['a', 'b', 'c']
-# l2 = ['1', '2', '3']
-# for row in zip(l1, l2):
-#     print " ".join(row)
