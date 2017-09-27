@@ -5,12 +5,12 @@ def test(bestandnaam):
     return infile
 
 kaartnummers = test('kaartnummers.txt').splitlines()
-aantal = kaartnummers.count()
 
-for banaan in kaartnummers:
-    text = banaan.split(',')
-    print(text[1] + ' heeft kaartnummer ' + text[0])
+print('Deze file heeft ' + str(len(kaartnummers)) + ' regels')
 
+print('Het grootste kaartnummer is: ' + str(max(kaartnummers)) + 'en dat staat op regel ')
 
-# Deze file telt 6 regels
-# Het grootste kaartnummer is: 645345 en dat staat op regel 4
+# for banaan in kaartnummers:
+#     text = banaan.split()
+#
+#     print(text[1] + ' heeft kaartnummer ' + text[0])

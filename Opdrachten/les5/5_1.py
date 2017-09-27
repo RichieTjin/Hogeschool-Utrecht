@@ -22,8 +22,9 @@ def convert(celsius):
 # 104.0 40.0
 
 def table():
+    print('F       C')
     for celsius in range(-30, 41, 10):
-        print('{:5.1f} {:5.1f}'.format(convert(celsius), celsius))
+        print('{:5.1f}  {:5.1f}'.format(convert(celsius), celsius))
 
 table()
 
