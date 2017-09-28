@@ -1,14 +1,21 @@
 def test(bestandnaam):
     file = open(bestandnaam)
-    infile = file.read()
+    infile = file.readlines()
     file.close()
     return infile
 
-kaartnummers = test('kaartnummers.txt').splitlines()
+kaartnummers = test('kaartnummers.txt')
 
-print('Deze file heeft ' + str(len(kaartnummers)) + ' regels')
+print('Deze file heeft ' + str(len(kaartnummers)))
 
-print('Het grootste kaartnummer is: ' + str(max(kaartnummers)) + 'en dat staat op regel ')
+hoogstenummer = 0
+for huidigeregel in kaartnummers:
+    woorden = huidigeregel.split(', ')
+    if int(woorden[0]) > hoogstenummer:
+        hoogstenummer = int(woorden[0])
+
+print('het hoogste kaartnummer is:', hoogstenummer)
+
 
 # for banaan in kaartnummers:
 #     text = banaan.split()
