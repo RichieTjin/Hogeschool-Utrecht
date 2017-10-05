@@ -8,6 +8,7 @@ def split(invoer):
     nieuw_alles = []
     for num in alles:
         nieuw_alles.append(int(num))
+    print('list van ints: ' + str(nieuw_alles))
 
     grootste_getal = max(alles)
     print('grootste waarde: ' + grootste_getal)
