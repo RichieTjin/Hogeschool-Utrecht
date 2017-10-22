@@ -3,6 +3,12 @@ def bereken():
     bedrag = input('Wat is het totaal bedrag? ')
 
     while True:
+        try:
+            int(bedrag)
+            int(aantal_personen)
+        except ValueError:
+            print('Gebruik cijfers voor het invoeren van het aantal/bedrag')
+            break
         if aantal_personen == 0:
             print('Delen door nul kan niet')
             break
